@@ -13,7 +13,7 @@
 }
 .button:hover {
   opacity: 0.9;
-  box-shadow: 1px 10px 10px grey;
+  box-shadow: 1px 10px 10px #d9d9d9;
 }
 .button__link:link {
   text-decoration: none;
@@ -57,7 +57,7 @@
   color: #9356DC;
 }
 
-.homeContent {
+.homePageContent {
   font-family: "Roboto", sans-serif;
   margin: 0px;
 }
@@ -101,7 +101,7 @@
   font-weight: 700;
   overflow-wrap: break-word;
 }
-.header__txt {
+.header__text {
   font-size: 18px;
   font-weight: 300;
   overflow-wrap: break-word;
@@ -180,7 +180,7 @@
   display: flex;
   align-items: center;
 }
-.operation__txt {
+.operation__text {
   font-weight: 500;
 }
 

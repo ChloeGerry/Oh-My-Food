@@ -10,7 +10,7 @@
     font-size: 16px;
     &:hover {
         opacity: 0.9;
-        box-shadow: 1px 10px 10px grey;
+        box-shadow: 1px 10px 10px $background-color;
     }
     &__link:link {
         text-decoration: none;

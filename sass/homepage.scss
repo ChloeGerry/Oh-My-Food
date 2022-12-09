@@ -1,4 +1,4 @@
-.homeContent {
+.homePageContent {
     font-family: "Roboto", sans-serif;
     margin: 0px;
 }
@@ -47,7 +47,7 @@
         overflow-wrap: break-word;
     }
 
-    &__txt {
+    &__text {
         font-size: 18px;
         font-weight: 300;
         overflow-wrap: break-word;
@@ -129,7 +129,7 @@
             align-items: center;
         }
     }
-    &__txt {
+    &__text {
         font-weight: 500;
     }
 }
