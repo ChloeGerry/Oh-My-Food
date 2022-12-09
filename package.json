@@ -1,0 +1,23 @@
+{
+  "name": "livrable-4-git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/style.scss:dist/css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChloeGerry/Oh-My-Food.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChloeGerry/Oh-My-Food/issues"
+  },
+  "homepage": "https://github.com/ChloeGerry/Oh-My-Food#readme",
+  "dependencies": {
+    "sass": "^1.56.2"
+  }
+}

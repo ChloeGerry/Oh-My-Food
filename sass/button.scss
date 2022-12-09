@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    align-self: center;
+    border-radius: 40px;
+    font-weight: 500;
+    color: $white;
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    box-shadow: 5px 10px 10px $background-color;
+    // width: fit-content;
+    font-size: 16px;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 1px 10px 10px grey;
+    }
+    &__link:link {
+        text-decoration: none;
+        color: $white;
+    }
+    &__link:active {
+        color: $white;
+    }
+    &__link:visited {
+        color: $white;
+    }
+}

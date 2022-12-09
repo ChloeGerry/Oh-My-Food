@@ -1,0 +1,245 @@
+.homeContent {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        width: 162px;
+        height: 44px;
+        margin: $spacing * 2 0px $spacing 0px;
+    }
+
+    &__location {
+        justify-content: center;
+        display: flex;
+        width: -webkit-fill-available;
+        background: lighten($background-color, 7%);
+        box-shadow: 0px -2px 2px $background-color;
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+
+    &__locationIcon {
+        display: flex;
+        align-items: center;
+        margin-right: $spacing * 2;
+    }
+
+    &__presentation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-image: linear-gradient(to bottom, $white 80%, #f2f2f2);
+        padding: $spacing * 3 $spacing * 3 0px $spacing * 3;
+        width: -webkit-fill-available;
+    }
+
+    &__title {
+        font-size: $title-size;
+        font-weight: 700;
+        overflow-wrap: break-word;
+    }
+
+    &__txt {
+        font-size: 18px;
+        font-weight: 300;
+        overflow-wrap: break-word;
+    }
+
+    &__button {
+        padding: $spacing * 2 $spacing * 3;
+        margin: $spacing  0px $spacing * 9 0px;
+    }
+}
+
+.operation {
+    padding: 0px $spacing * 3;
+    &__title {
+        font-size: $title-size;
+        font-weight: 700;
+        margin: $spacing * 7 0px $spacing * 4 0px;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__navWrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacing * 4;
+        width: 100%;
+    }
+    &__numberIcon {
+        position: absolute;
+        z-index: 1;
+        background: $color-primary;
+        border-radius: 50%;
+        border: 6px solid $color-primary;
+        width: 12px;
+        color: $white;
+        font-size: 12px;
+        &::before {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__link:hover &__Icon {
+        color: $color-primary;
+        opacity: 1;
+    }
+    &__link:link {
+        text-decoration: none;
+        color: $black;
+    }
+    &__link:active {
+        color: $black;
+    }
+    &__link:visited {
+        color: $black;
+    }
+    &__navCard {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        // position: relative;
+        margin-left: 12px;
+        background: $card-color;
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px $background-color;
+        padding: $spacing * 2 $spacing * 9 $spacing * 2 $spacing * 6;
+        width: 100%;
+    }
+    &__navCard:hover {
+        background: lighten($color-primary, 35%);
+    }
+    &__Icon {
+        margin: 0px $spacing * 3 0px -12px;
+        font-size: 20px;
+        opacity: 0.5;
+        &::before {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__txt {
+        font-weight: 500;
+    }
+}
+
+.restaurants {
+    background: lighten($background-color, 12%);
+    padding: 0px $spacing * 3 $spacing * 5 $spacing * 3;
+    margin-top: $spacing * 5;
+    &__link:link {
+        color: $black;
+        text-decoration: none;
+        width: 100%;
+    }
+    &__title {
+        font-size: $title-size;
+        font-weight: 700;
+        padding-top: $spacing * 7;
+        margin-bottom: $spacing * 3;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $spacing * 3;
+    }
+    &__pic {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: bottom 0px right;
+        width: 100%;
+        height: 235px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    &__pic--PaletteduGout {
+        background-image: url("../../images/palette-gout.jpg");
+    }
+    &__pic--NoteEnchantee {
+        background-image: url("../../images/note-enchantee.jpg");
+        background-position: bottom -100px right;
+    }
+    &__pic--AlaFrancaise {
+        background-image: url("../../images/la-francaise.jpg");
+    }
+    &__pic--DelicedesSens {
+        background-image: url("../../images/delice-sens.jpg")
+    }
+    &__new {
+        border: 1px solid $color-tertiary;
+        border-radius: 3px;
+        color: darken($color-tertiary, 40%);
+        background-color: $color-tertiary;
+        padding: $spacing $spacing * 2;
+        margin-right: $spacing * 2;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &__legend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $white;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 5px 5px 20px $background-color;
+        border-top: none;
+        background: $white;
+        padding: $spacing * 2 $spacing * 3 $spacing * 2 $spacing * 2;
+    }
+    &__legendWrapper {
+        color: $black;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0px 0px 8px 0px;
+    }
+    &__district {
+        margin: 0px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.footer {
+    background-color: darken($background-color, 65%);
+    padding: $spacing * 3 0px $spacing * 4 $spacing * 3;
+    &__logo {
+        width: 135px;
+        height: 27px;
+        filter: invert(100%);
+        margin: 0px 0px $spacing * 2 0px;
+    }
+    &__textWrapper {
+        display: flex;
+        align-items: baseline;
+    }
+    &__icon {
+        margin: 0px $spacing * 2 0px 0px;
+        color: $white;
+    }
+    &__text {
+        margin: 0px 0px $spacing 0px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__link {
+        color: $white;
+    }
+    &__link:link {
+        text-decoration: none;
+    }
+}

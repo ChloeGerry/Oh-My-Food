@@ -1,0 +1,31 @@
+.like  > .like__icon--solid {
+    display: none;
+ }
+
+.like {
+    border: none;
+    background: none;
+    cursor: pointer; 
+    &__icon {
+        font-size: 24px;
+        color: $black;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    &:active &__icon--solid {
+        display: block;
+        background: linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        }
+    &:active &__icon--regular {
+        display: none;
+    }
+    &:hover &__icon--regular {
+        // display: none;
+        color: $color-primary;
+    }
+}
