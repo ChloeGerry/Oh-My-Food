@@ -11,7 +11,6 @@
 
     &__logo {
         width: 162px;
-        height: 44px;
         margin: $spacing * 2 0px $spacing 0px;
     }
 
@@ -66,12 +65,12 @@
         font-weight: 700;
         margin: $spacing * 7 0px $spacing * 4 0px;
     }
-    &__nav {
+    &__navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    &__navWrapper {
+    &__navigationWrapper {
         display: flex;
         align-items: center;
         margin-bottom: $spacing * 4;
@@ -105,7 +104,7 @@
     &__link:visited {
         color: $black;
     }
-    &__navCard {
+    &__navigationCard {
         display: flex;
         align-items: center;
         // justify-content: center;
@@ -117,7 +116,7 @@
         padding: $spacing * 2 $spacing * 9 $spacing * 2 $spacing * 6;
         width: 100%;
     }
-    &__navCard:hover {
+    &__navigationCard:hover {
         background: lighten($color-primary, 35%);
     }
     &__Icon {
@@ -155,7 +154,7 @@
         align-items: center;
         margin-bottom: $spacing * 3;
     }
-    &__pic {
+    &__picture {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
@@ -165,18 +164,18 @@
         height: 235px;
         border-radius: 20px 20px 0px 0px;
     }
-    &__pic--PaletteduGout {
-        background-image: url("../../images/palette-gout.jpg");
+    &__picture--PaletteduGout {
+        background-image: url("../../images/laPaletteDuGout.jpg");
     }
-    &__pic--NoteEnchantee {
-        background-image: url("../../images/note-enchantee.jpg");
+    &__picture--NoteEnchantee {
+        background-image: url("../../images/laNoteEnchantee.jpg");
         background-position: bottom -100px right;
     }
-    &__pic--AlaFrancaise {
-        background-image: url("../../images/la-francaise.jpg");
+    &__picture--AlaFrancaise {
+        background-image: url("../../images/aLaFrancaise.jpg");
     }
-    &__pic--DelicedesSens {
-        background-image: url("../../images/delice-sens.jpg")
+    &__picture--DelicedesSens {
+        background-image: url("../../images/leDeliceDesSens.jpg")
     }
     &__new {
         border: 1px solid $color-tertiary;
@@ -219,7 +218,6 @@
     padding: $spacing * 3 0px $spacing * 4 $spacing * 3;
     &__logo {
         width: 135px;
-        height: 27px;
         filter: invert(100%);
         margin: 0px 0px $spacing * 2 0px;
     }

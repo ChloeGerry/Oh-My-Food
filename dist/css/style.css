@@ -70,7 +70,6 @@
 }
 .header__logo {
   width: 162px;
-  height: 44px;
   margin: 16px 0px 8px 0px;
 }
 .header__location {
@@ -119,12 +118,12 @@
   font-weight: 700;
   margin: 56px 0px 32px 0px;
 }
-.operation__nav {
+.operation__navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.operation__navWrapper {
+.operation__navigationWrapper {
   display: flex;
   align-items: center;
   margin-bottom: 32px;
@@ -158,7 +157,7 @@
 .operation__link:visited {
   color: #000000;
 }
-.operation__navCard {
+.operation__navigationCard {
   display: flex;
   align-items: center;
   margin-left: 12px;
@@ -168,7 +167,7 @@
   padding: 16px 72px 16px 48px;
   width: 100%;
 }
-.operation__navCard:hover {
+.operation__navigationCard:hover {
   background: #f2eafb;
 }
 .operation__Icon {
@@ -206,7 +205,7 @@
   align-items: center;
   margin-bottom: 24px;
 }
-.restaurants__pic {
+.restaurants__picture {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -216,18 +215,18 @@
   height: 235px;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurants__pic--PaletteduGout {
-  background-image: url("../../images/palette-gout.jpg");
+.restaurants__picture--PaletteduGout {
+  background-image: url("../../images/laPaletteDuGout.jpg");
 }
-.restaurants__pic--NoteEnchantee {
-  background-image: url("../../images/note-enchantee.jpg");
+.restaurants__picture--NoteEnchantee {
+  background-image: url("../../images/laNoteEnchantee.jpg");
   background-position: bottom -100px right;
 }
-.restaurants__pic--AlaFrancaise {
-  background-image: url("../../images/la-francaise.jpg");
+.restaurants__picture--AlaFrancaise {
+  background-image: url("../../images/aLaFrancaise.jpg");
 }
-.restaurants__pic--DelicedesSens {
-  background-image: url("../../images/delice-sens.jpg");
+.restaurants__picture--DelicedesSens {
+  background-image: url("../../images/leDeliceDesSens.jpg");
 }
 .restaurants__new {
   border: 1px solid #99E2D0;
@@ -270,7 +269,6 @@
 }
 .footer__logo {
   width: 135px;
-  height: 27px;
   filter: invert(100%);
   margin: 0px 0px 16px 0px;
 }
@@ -292,6 +290,229 @@
 }
 .footer__link:link {
   text-decoration: none;
+}
+
+.restaurantMenuContent {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  margin: 16px 24px;
+}
+.menuHeader__link {
+  color: #000000;
+  opacity: 0.8;
+}
+.menuHeader__icon {
+  font-size: 24px;
+}
+.menuHeader__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menuHeader__logo {
+  width: 162px;
+}
+
+.section__picture {
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+}
+.section__picture--AlaFrancaise {
+  background-image: url("../../images/aLaFrancaise.jpg");
+  background-position: bottom 35px right;
+}
+.section__picture--PaletteduGout {
+  background-image: url("../../images/laPaletteDuGout.jpg");
+  background-position: bottom 20px right;
+}
+.section__picture--NoteEnchantee {
+  background-image: url("../../images/laNoteEnchantee.jpg");
+  background-position: bottom -40px right;
+}
+.section__picture--DelicedesSens {
+  background-image: url("../../images/leDeliceDesSens.jpg");
+  background-position: bottom 55px right;
+}
+.section__wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #F6F6F6;
+  border: 1px solid #F6F6F6;
+  border-start-start-radius: 40px;
+  border-start-end-radius: 40px;
+  position: relative;
+  margin-top: -64px;
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 40px 0px 16px;
+}
+.section__title {
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0px;
+}
+.section__button {
+  padding: 16px 48px;
+  margin: 32px 0px 80px 0px;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes order {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+.menu {
+  margin: 0px 16px;
+}
+.menu__title {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 40px 0px 16px 0px;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 8px;
+}
+.menu__iconWrapper {
+  display: none;
+}
+.menu__icon {
+  display: none;
+}
+.menu__choice {
+  border-radius: 20px;
+  background: #ffffff;
+  margin-bottom: 16px;
+  box-shadow: 5px 5px 20px #d9d9d9;
+  animation: menu 1000ms backwards;
+}
+.menu__choice--1 {
+  animation-delay: 250ms;
+}
+.menu__choice--2 {
+  animation-delay: 500ms;
+}
+.menu__choice--3 {
+  animation-delay: 750ms;
+}
+.menu__choice--4 {
+  animation-delay: 1000ms;
+}
+.menu__link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.menu__link:link {
+  text-decoration: none;
+  color: #000000;
+}
+.menu__link:visited {
+  color: #000000;
+}
+.menu__nameWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 24px 16px 16px;
+}
+.menu__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 0px 8px 0px;
+}
+.menu__detailWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__detail {
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__price {
+  margin: 0px;
+  font-weight: bold;
+}
+.menu__choice:hover .menu__iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  padding: 39px 32px;
+  border-start-end-radius: 20px;
+  border-end-end-radius: 20px;
+  width: fit-content;
+  animation: order 100ms;
+}
+.menu__icon {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  width: 12px;
+  color: #99E2D0;
+  font-size: 12px;
+  transform: rotate(1turn);
+}
+
+@media screen and (min-width: 768px) {
+  .menuHeader__wrapper {
+    width: 100%;
+  }
+  .section__picture {
+    background-position: bottom -6px right;
+    height: 350px;
+  }
+  .section__picture--NoteEnchantee {
+    background-position: bottom -190px right;
+  }
+  .section__picture--DelicedesSens {
+    background-position: bottom 10px right;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section__picture {
+    height: 400px;
+    background-position: bottom -185px right;
+  }
+  .section__picture--NoteEnchantee {
+    background-position: bottom -490px right;
+  }
+  .section__picture--AlaFrancaise {
+    background-position: bottom -170px right;
+  }
+  .section__picture--DelicedesSens {
+    background-position: bottom -145px right;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

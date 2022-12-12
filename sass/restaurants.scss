@@ -1,0 +1,226 @@
+.restaurantMenuContent {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.menuHeader {
+    display: flex;
+    align-items: center;
+    margin: $spacing * 2 $spacing * 3;
+    &__link {
+    color: $black;
+    opacity: 0.8;
+    }
+    &__icon {
+        font-size: 24px;
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__logo {
+        width: 162px;
+    }
+}
+
+.section {
+    &__picture {
+        width: 100%;
+        height: 275px;
+        background-size: cover;
+    }
+    &__picture--AlaFrancaise {
+        background-image: url("../../images/aLaFrancaise.jpg");
+        background-position: bottom 35px right;
+    }
+    &__picture--PaletteduGout {
+        background-image: url("../../images/laPaletteDuGout.jpg");
+        background-position: bottom 20px right;
+    }
+    &__picture--NoteEnchantee {
+        background-image: url("../../images/laNoteEnchantee.jpg");
+        background-position: bottom -40px right;
+    }
+    &__picture--DelicedesSens {
+        background-image: url("../../images/leDeliceDesSens.jpg");
+        background-position: bottom 55px right;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background: $card-color;
+        border: 1px solid $card-color;
+        border-start-start-radius: 40px;
+        border-start-end-radius: 40px;
+        position: relative;
+        margin-top: -$spacing * 8;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: $spacing * 4 $spacing * 5 0px $spacing * 2;
+    }
+    &__title {
+        font-family: "Shrikhand", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 28px;
+        margin: 0px;
+    }
+    &__button {
+        padding: $spacing * 2 $spacing * 6;
+        margin: $spacing * 4 0px $spacing * 10 0px;
+    }
+}
+
+@keyframes menu {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes order {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+.menu {
+    margin: 0px $spacing * 2;
+    &__title {
+        font-size: 16px;
+        font-weight: 300;
+        margin: $spacing * 5 0px $spacing * 2 0px;
+        border-bottom: 3px solid $color-tertiary;
+        padding-bottom: 8px;
+    }
+    &__iconWrapper {
+        display: none;
+    }
+    &__icon {
+        display: none;
+    }
+    &__choice {
+        border-radius: 20px;
+        background: $white;
+        margin-bottom: $spacing * 2;
+        box-shadow: 5px 5px 20px $background-color;
+        animation: menu 1000ms backwards;
+        @for $i from 1 through 4 {
+            &--#{$i} {
+                animation-delay: 250ms * $i;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__link:link {
+        text-decoration: none;
+        color: $black;
+    }
+    &__link:visited {
+        color: $black;
+    }
+    &__nameWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: $spacing * 2 $spacing * 3 $spacing * 2 $spacing * 2;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0px 0px $spacing 0px;
+    }
+    &__detailWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__detail {
+        margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        margin: 0px;
+        font-weight: bold;
+    }
+    &__choice:hover &__iconWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #99E2D0;
+        background: #99E2D0;
+        padding: 39px $spacing * 4;
+        border-start-end-radius: 20px;
+        border-end-end-radius: 20px;
+        width: fit-content;
+        animation: order 100ms;
+    }
+    &__icon {
+        position: absolute;
+        background: $white;
+        border-radius: 50%;
+        border: 6px solid $white;
+        width: 12px;
+        color: $color-tertiary;
+        font-size: 12px;
+        transform: rotate(1turn);
+    }
+}
+
+@media screen  and (min-width: 768px) {
+.menuHeader {
+    &__wrapper {
+        width: 100%;
+    }
+}
+.section {
+    &__picture {
+        background-position: bottom -6px right;
+        height: 350px;
+    }
+    &__picture--NoteEnchantee {
+        background-position: bottom -190px right;
+    }
+    &__picture--DelicedesSens {
+        background-position: bottom 10px right;
+    }
+}
+}
+
+@media screen  and (min-width: 992px) {
+.section {
+    &__picture {
+        height: 400px;
+        background-position: bottom -185px right;
+    }
+    &__picture--NoteEnchantee {
+        background-position: bottom -490px right;
+    }
+    &__picture--AlaFrancaise {
+        background-position: bottom -170px right;
+    }
+    &__picture--DelicedesSens {
+        background-position: bottom -145px right;
+    }
+}
+}
