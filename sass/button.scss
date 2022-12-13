@@ -8,6 +8,9 @@
     box-shadow: 5px 10px 10px $background-color;
     // width: fit-content;
     font-size: 16px;
+    &__link {
+        margin: 0px;
+    }
     &:hover {
         opacity: 0.9;
         box-shadow: 1px 10px 10px $background-color;

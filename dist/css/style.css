@@ -11,6 +11,9 @@
   box-shadow: 5px 10px 10px #d9d9d9;
   font-size: 16px;
 }
+.button__link {
+  margin: 0px;
+}
 .button:hover {
   opacity: 0.9;
   box-shadow: 1px 10px 10px #d9d9d9;
@@ -108,6 +111,7 @@
 .header__button {
   padding: 16px 24px;
   margin: 8px 0px 72px 0px;
+  text-decoration: none;
 }
 
 .operation {
@@ -127,7 +131,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 32px;
-  width: 100%;
 }
 .operation__numberIcon {
   position: absolute;
@@ -165,7 +168,6 @@
   border-radius: 20px;
   box-shadow: 5px 5px 20px #d9d9d9;
   padding: 16px 72px 16px 48px;
-  width: 100%;
 }
 .operation__navigationCard:hover {
   background: #f2eafb;
@@ -292,7 +294,7 @@
   text-decoration: none;
 }
 
-.restaurantMenuContent {
+.menuContent {
   margin: 0px;
   font-family: "Roboto", sans-serif;
 }
@@ -320,24 +322,21 @@
 
 .section__picture {
   width: 100%;
-  height: 275px;
+  height: 350px;
   background-size: cover;
 }
 .section__picture--AlaFrancaise {
   background-image: url("../../images/aLaFrancaise.jpg");
-  background-position: bottom 35px right;
 }
 .section__picture--PaletteduGout {
   background-image: url("../../images/laPaletteDuGout.jpg");
-  background-position: bottom 20px right;
 }
 .section__picture--NoteEnchantee {
   background-image: url("../../images/laNoteEnchantee.jpg");
-  background-position: bottom -40px right;
+  background-position: top -130px right;
 }
 .section__picture--DelicedesSens {
   background-image: url("../../images/leDeliceDesSens.jpg");
-  background-position: bottom 55px right;
 }
 .section__wrapper {
   display: flex;
@@ -365,6 +364,7 @@
 .section__button {
   padding: 16px 48px;
   margin: 32px 0px 80px 0px;
+  text-decoration: none;
 }
 
 @keyframes menu {
@@ -394,9 +394,10 @@
 .menu__title {
   font-size: 16px;
   font-weight: 300;
-  margin: 40px 0px 16px 0px;
+  margin: 40px 0px 0px 0px;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 8px;
+  width: fit-content;
 }
 .menu__iconWrapper {
   display: none;
@@ -407,7 +408,7 @@
 .menu__choice {
   border-radius: 20px;
   background: #ffffff;
-  margin-bottom: 16px;
+  margin-top: 16px;
   box-shadow: 5px 5px 20px #d9d9d9;
   animation: menu 1000ms backwards;
 }
@@ -439,11 +440,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 16px 24px 16px 16px;
+  padding: 16px 24px 16px 8px;
 }
 .menu__name {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0px 0px 8px 0px;
 }
 .menu__detailWrapper {
@@ -456,10 +457,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
 }
 .menu__price {
   margin: 0px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 15px;
+  color: #333333;
 }
 .menu__choice:hover .menu__iconWrapper {
   display: flex;
@@ -512,6 +517,26 @@
   }
   .section__picture--DelicedesSens {
     background-position: bottom -145px right;
+  }
+  .section__wrapper {
+    margin: -64px 192px 0px 192px;
+  }
+  .section__button {
+    margin: 40px 0px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 48px 100px 40px 0px;
+  }
+  .footer__logo {
+    margin: 0px 0px 0px 32px;
+  }
+  .footer__wrapper {
+    display: flex;
+  }
+  .footer__textWrapper {
+    margin-right: 40px;
   }
 }
 
