@@ -116,7 +116,7 @@
         border-radius: 20px;
         background: $white;
         margin-top: 16px;
-        box-shadow: 5px 5px 20px $background-color;
+        box-shadow: 5px 5px 20px $shadow-color;
         animation: menu 1000ms backwards;
         @for $i from 1 through 4 {
             &--#{$i} {
@@ -164,7 +164,7 @@
         margin: 0px;
         font-weight: 700;
         font-size: 15px;
-        color: darken($background-color, 65%);
+        color: darken($shadow-color, 65%);
     }
     &__choice:hover &__iconWrapper {
         display: flex;

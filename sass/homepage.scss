@@ -17,17 +17,20 @@
     &__location {
         justify-content: center;
         display: flex;
-        width: -webkit-fill-available;
-        background: lighten($background-color, 7%);
-        box-shadow: 0px -2px 2px $background-color;
+        align-items: center;
+        width: 100%;
+        background-color: $card-color;
+        box-shadow: 0px -2px 8px $shadow-color;
         font-size: 16px;
         font-weight: 500;
-        opacity: 0.8;
+        color: $dark-grey;
     }
 
     &__locationIcon {
         display: flex;
         align-items: center;
+        width: 12px;
+        height: 16px;
         margin-right: $spacing * 2;
     }
 
@@ -35,9 +38,9 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-image: linear-gradient(to bottom, $white 80%, #f2f2f2);
+        background-image: linear-gradient(to bottom, $white 80%, $light-grey);
         padding: $spacing * 3 $spacing * 3 0px $spacing * 3;
-        width: -webkit-fill-available;
+        width: 100%;
     }
 
     &__title {
@@ -49,33 +52,39 @@
     &__text {
         font-size: 18px;
         font-weight: 300;
+        color: $dark-grey;
+        margin-top: 0px;
         overflow-wrap: break-word;
     }
 
     &__button {
         padding: $spacing * 2 $spacing * 3;
-        margin: $spacing  0px $spacing * 9 0px;
+        margin: $spacing  0px $spacing * 7 0px;
         text-decoration: none;
     }
 }
 
 .operation {
     padding: 0px $spacing * 3;
+
     &__title {
         font-size: $title-size;
         font-weight: 700;
-        margin: $spacing * 7 0px $spacing * 4 0px;
+        margin: $spacing * 6 0px $spacing * 3 0px;
     }
+
     &__navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     &__navigationWrapper {
         display: flex;
         align-items: center;
-        margin-bottom: $spacing * 4;
+        margin-bottom: $spacing * 3;
     }
+
     &__numberIcon {
         position: absolute;
         z-index: 1;
@@ -90,92 +99,112 @@
             justify-content: center;
         }
     }
+
     &__link:hover &__Icon {
         color: $color-primary;
         opacity: 1;
     }
+
     &__link:link {
         text-decoration: none;
         color: $black;
     }
+
     &__link:active {
         color: $black;
     }
+
     &__link:visited {
         color: $black;
     }
+
     &__navigationCard {
         display: flex;
         align-items: center;
-        // justify-content: center;
-        // position: relative;
         margin-left: 12px;
+        padding: $spacing * 2 $spacing * 9 $spacing * 2 $spacing * 6;
         background: $card-color;
         border-radius: 20px;
-        box-shadow: 5px 5px 20px $background-color;
-        padding: $spacing * 2 $spacing * 9 $spacing * 2 $spacing * 6;
+        box-shadow: 5px 5px 20px $shadow-color;
     }
+
     &__navigationCard:hover {
         background: lighten($color-primary, 35%);
     }
+
     &__Icon {
         margin: 0px $spacing * 3 0px -12px;
         font-size: 20px;
         opacity: 0.5;
+        height: 20px;
+        width: 13px;
         &::before {
             display: flex;
             align-items: center;
         }
     }
+
     &__text {
         font-weight: 500;
+        font-size: 16px;
     }
 }
 
 .restaurants {
-    background: lighten($background-color, 12%);
+    background-color: $card-color;
     padding: 0px $spacing * 3 $spacing * 5 $spacing * 3;
     margin-top: $spacing * 5;
+    
     &__link:link {
         color: $black;
         text-decoration: none;
         width: 100%;
     }
+
     &__title {
         font-size: $title-size;
         font-weight: 700;
         padding-top: $spacing * 7;
-        margin-bottom: $spacing * 3;
+        margin: 0px 0px $spacing * 4 0px;
     }
+
     &__card {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: $spacing * 3;
     }
+
     &__picture {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
         background-size: cover;
-        background-position: bottom 0px right;
         width: 100%;
-        height: 235px;
+        height: 231px;
         border-radius: 20px 20px 0px 0px;
     }
+
     &__picture--PaletteduGout {
         background-image: url("../../images/laPaletteDuGout.jpg");
+        background-position: top -70px right;
     }
+
     &__picture--NoteEnchantee {
         background-image: url("../../images/laNoteEnchantee.jpg");
-        background-position: bottom -100px right;
+        background-position: top -202px right;
     }
+
     &__picture--AlaFrancaise {
         background-image: url("../../images/aLaFrancaise.jpg");
+        background-position: bottom 0px right;
     }
+
     &__picture--DelicedesSens {
-        background-image: url("../../images/leDeliceDesSens.jpg")
+        background-image: url("../../images/leDeliceDesSens.jpg");
+        background-position: bottom 0px right;
     }
+
     &__new {
         border: 1px solid $color-tertiary;
         border-radius: 3px;
@@ -186,25 +215,30 @@
         font-weight: 500;
         font-size: 14px;
     }
+
     &__legend {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border: 1px solid $white;
         border-radius: 0px 0px 20px 20px;
-        box-shadow: 5px 5px 20px $background-color;
+        box-shadow: 5px 5px 20px $shadow-color;
         border-top: none;
         background: $white;
-        padding: $spacing * 2 $spacing * 3 $spacing * 2 $spacing * 2;
+        padding: $spacing * 2 $spacing * 3 0px $spacing * 2;
+        height: 77px;
     }
+
     &__legendWrapper {
         color: $black;
     }
+
     &__name {
         font-size: 18px;
         font-weight: 700;
-        margin: 0px 0px 8px 0px;
+        margin: 0px 0px $spacing 0px;
     }
+
     &__district {
         margin: 0px;
         font-size: 18px;
@@ -213,30 +247,113 @@
 }
 
 .footer {
-    background-color: darken($background-color, 65%);
+    background-color: $dark-grey;
     padding: $spacing * 3 0px $spacing * 4 $spacing * 3;
+
     &__logo {
         width: 135px;
         filter: invert(100%);
         margin: 0px 0px $spacing * 2 0px;
     }
+
     &__textWrapper {
         display: flex;
         align-items: baseline;
     }
+
     &__icon {
         margin: 0px $spacing * 2 0px 0px;
         color: $white;
     }
+
     &__text {
         margin: 0px 0px $spacing 0px;
         font-size: 16px;
         font-weight: 500;
     }
+
     &__link {
         color: $white;
     }
+
     &__link:link {
         text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+
+        &__logo {
+            width: 200px;
+            margin: $spacing * 3 0px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin: $spacing * 2 0px;
+        }
+
+        &__text {
+            margin: 0px;
+        }
+
+        &__button {
+            margin: $spacing * 2 0px $spacing * 5 0px;
+        }
+    }
+    
+    .operation {
+        padding: 0px 0px 0px $spacing * 10;
+
+        &__navigation {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__navigationWrapper {
+            margin: 0px $spacing * 4 $spacing * 5 0px;
+        }
+    }
+
+    .restaurants {
+        padding: 0px $spacing * 5 $spacing * 10 $spacing * 5;
+
+        &__title {
+            padding: $spacing * 6 0px 0px $spacing * 5;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            gap: $spacing * 3;
+        }
+
+        &__picture {
+            width: 300px;
+            height: 175px;
+        }
+
+        &__picture--PaletteduGout, &__picture--NoteEnchantee, &__picture--AlaFrancaise, &__picture--DelicedesSens {
+            background-position: 0%;
+        }
+
+        &__card {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen  and (max-width: 1300px) {
+    .operation {
+        &__navigation {
+            flex-wrap: wrap;
+        }
+    }
+
+    .restaurants {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
     }
 }
