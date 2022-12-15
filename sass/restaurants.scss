@@ -1,6 +1,6 @@
 .menuContent {
-    margin: 0px;
     font-family: "Roboto", sans-serif;
+    margin: 0px;
 }
 
 .menuHeader {
@@ -45,11 +45,10 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+        position: relative;
         background: $card-color;
         border: 1px solid $card-color;
-        border-start-start-radius: 40px;
-        border-start-end-radius: 40px;
-        position: relative;
+        border-radius: 40px 40px 0px 0px;
         margin-top: -$spacing * 8;
     }
     &__header {
@@ -114,7 +113,7 @@
     &__choice {
         border-radius: 20px;
         background: $white;
-        margin-top: 16px;
+        margin-top: $spacing * 2;
         box-shadow: 5px 5px 20px $shadow-color;
         animation: menu 1000ms backwards;
         @for $i from 1 through 4 {
@@ -163,17 +162,16 @@
         margin: 0px;
         font-weight: 700;
         font-size: 15px;
-        color: darken($shadow-color, 65%);
+        color: $dark-grey;
     }
     &__choice:hover &__iconWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #99E2D0;
+        border: 0px solid #99E2D0;
         background: #99E2D0;
-        padding: 39px $spacing * 4;
-        border-start-end-radius: 20px;
-        border-end-end-radius: 20px;
+        padding: $spacing * 5 $spacing * 4;
+        border-radius: 0px 20px 20px 0px;
         width: fit-content;
         animation: order 100ms;
     }
@@ -225,17 +223,17 @@
         }
 
         &__wrapper {
-            margin: -64px 80px 0px 80px;
+            margin: -$spacing * 8 $spacing * 10 0px $spacing * 10;
         }
 
         &__header {
             justify-content: center;
-            gap: 24px;
-            margin: 48px 0px 0px 0px;
+            gap: $spacing * 3;
+            margin: $spacing * 6 0px 0px 0px;
         }
 
         &__button  {
-            margin: 56px 0px;
+            margin: $spacing * 7 0px;
         }
     }
 
@@ -243,7 +241,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0px 80px;
+        padding: 0px $spacing * 10;
         margin: 0px;
 
         &__title {
@@ -257,7 +255,7 @@
         }
 
         &__nameWrapper {
-            padding: 16px;
+            padding: $spacing * 2;
         }
 
         &__detail {
@@ -288,7 +286,7 @@
         }
 
         &__wrapper {
-            margin: -64px 192px 0px 192px;
+            margin: -$spacing * 8 192px 0px 192px;
         }
     }
 

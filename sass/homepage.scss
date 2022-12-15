@@ -246,41 +246,6 @@
     }
 }
 
-.footer {
-    background-color: $dark-grey;
-    padding: $spacing * 3 0px $spacing * 4 $spacing * 3;
-
-    &__logo {
-        width: 137px;
-        filter: invert(100%);
-        margin: 0px 0px $spacing * 2 0px;
-    }
-
-    &__textWrapper {
-        display: flex;
-        align-items: baseline;
-    }
-
-    &__icon {
-        margin: 0px $spacing * 2 0px 0px;
-        color: $white;
-    }
-
-    &__text {
-        margin: 0px 0px $spacing 0px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    &__link {
-        color: $white;
-    }
-
-    &__link:link {
-        text-decoration: none;
-    }
-}
-
 @media screen and (min-width: 768px) {
     .header {
 
@@ -309,6 +274,7 @@
         &__navigation {
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         &__navigationWrapper {
@@ -326,6 +292,7 @@
         &__wrapper {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: $spacing * 3;
         }
 
@@ -340,40 +307,6 @@
 
         &__card {
             margin-bottom: 0px;
-        }
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: row-reverse;
-        padding: $spacing * 6 100px $spacing * 5 $spacing * 4;
-
-        &__wrapper {
-            display: flex;
-        }
-
-        &__textWrapper {
-            margin-right: $spacing * 5;
-        }
-    }
-}
-
-@media screen  and (min-width: 1300px) {
-    .operation {
-        &__navigation {
-            flex-wrap: wrap;
-        }
-    }
-
-    .restaurants {
-        &__wrapper {
-            flex-wrap: wrap;
-        }
-    }
-
-    .footer {
-        &__logo {
-            margin: 0px 0px 0px $spacing * 4;
         }
     }
 }
