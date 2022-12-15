@@ -342,9 +342,23 @@
             margin-bottom: 0px;
         }
     }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: $spacing * 6 100px $spacing * 5 $spacing * 4;
+
+        &__wrapper {
+            display: flex;
+        }
+
+        &__textWrapper {
+            margin-right: $spacing * 5;
+        }
+    }
 }
 
-@media screen  and (max-width: 1300px) {
+@media screen  and (min-width: 1300px) {
     .operation {
         &__navigation {
             flex-wrap: wrap;
@@ -354,6 +368,12 @@
     .restaurants {
         &__wrapper {
             flex-wrap: wrap;
+        }
+    }
+
+    .footer {
+        &__logo {
+            margin: 0px 0px 0px $spacing * 4;
         }
     }
 }
