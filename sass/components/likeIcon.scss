@@ -6,14 +6,17 @@
     border: none;
     background: none;
     cursor: pointer; 
+
     &__icon {
         font-size: 24px;
         color: $black;
     }
+
     &:link {
         text-decoration: none;
     }
-    &:active &__icon--solid {
+    
+    &:hover &__icon--solid {
         display: block;
         background: linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
@@ -21,11 +24,8 @@
         background-clip: text;
         color: transparent;
         }
-    &:active &__icon--regular {
-        display: none;
-    }
+
     &:hover &__icon--regular {
-        // display: none;
-        color: $color-primary;
+        display: none;
     }
 }

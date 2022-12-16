@@ -7,6 +7,11 @@
         <title>Oh my Food</title>
     </head>
     <body class="homePageContent">
+        <div class="homePageAnimation">
+            <div class="progress">
+                <div class="progress__bar"></div>
+            </div>
+        </div>
         <header class="header">
             <img src="../images/ohmyfood.png" alt="logo" class="header__logo">
             <div class="header__location">
@@ -20,12 +25,14 @@
                 <p class="header__text">
                     Découvrez des restaurants d'exception, sélectionnés par nos soins.
                 </p>
-                <a href="#restaurants" class="header__button button">
-                    <p class="button__link">Explorez nos restaurants</p>
-                </a>
+                <button class="button" type="button">
+                    <a href="#restaurants" class="button__link">
+                        Explorez nos restaurants
+                    </a>
+                </button>
             </div>
         </header>
-        <main>
+        <main class="main">
             <section class="operation">
                 <h2 class="operation__title">Fonctionnement</h2>
                 <nav class="operation__navigation">
