@@ -18,12 +18,10 @@
     
     &:hover &__icon--solid {
         display: block;
-        background: linear-gradient($color-primary, $color-secondary);
+        background-image : linear-gradient(to bottom right, $color-primary, $color-secondary);
         -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
         color: transparent;
-        }
+    }
 
     &:hover &__icon--regular {
         display: none;

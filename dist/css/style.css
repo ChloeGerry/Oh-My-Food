@@ -56,10 +56,8 @@
 }
 .like:hover .like__icon--solid {
   display: block;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(to bottom right, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
   color: transparent;
 }
 .like:hover .like__icon--regular {
