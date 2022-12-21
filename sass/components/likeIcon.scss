@@ -1,6 +1,28 @@
+
 .like  > .like__icon--solid {
     display: none;
- }
+}
+
+@keyframes like__icon--solid {
+    0% {
+        background-color: $color-secondary;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    50% {
+        background-color: #de7aff;
+        // background-color: #dc56dc;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        background-color: $color-primary;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
 
 .like {
     border: none;
@@ -18,9 +40,8 @@
     
     &:hover &__icon--solid {
         display: block;
-        background-image : linear-gradient(to bottom right, $color-primary, $color-secondary);
-        -webkit-background-clip: text;
-        color: transparent;
+        animation: like__icon--solid 750ms;
+        color: $color-primary;
     }
 
     &:hover &__icon--regular {

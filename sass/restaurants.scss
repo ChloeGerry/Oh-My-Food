@@ -99,6 +99,16 @@
     }
 }
 
+@keyframes order {
+    0% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .menu {
     margin: 0px $spacing * 2;
 
@@ -191,7 +201,7 @@
         padding: $spacing * 5 $spacing * 4;
         border-radius: 0px 20px 20px 0px;
         width: fit-content;
-        animation: order 100ms;
+        animation: order 1000ms;
     }
 
     &__icon {
