@@ -49,7 +49,7 @@
     color: transparent;
   }
   50% {
-    background-color: #de7aff;
+    background-color: #dc56dc;
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -127,24 +127,26 @@
     margin: 0px 0px 0px 32px;
   }
 }
+@keyframes homePageAnimation {
+  0% {
+    visibility: initial;
+    width: 25px;
+  }
+  100% {
+    width: 50%;
+  }
+}
 .progress {
-  border: 0px;
-  width: 800px;
-  height: 40px;
-  padding: 8px;
+  width: 50%;
   position: fixed;
-  top: calc(100% - 450px);
-  left: calc(100% - 1115px);
-}
-.progress__bar {
-  width: 100%;
-  height: 40px;
-  border-radius: 20px;
+  top: 47.5%;
+  left: 25%;
+  height: 5%;
+  border-radius: 25px;
+  transform-origin: top left;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   animation: homePageAnimation 3000ms;
-}
-
-.header, .main, .footer {
-  visibility: initial;
+  visibility: hidden;
 }
 
 .homePageContent {
