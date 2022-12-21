@@ -94,18 +94,30 @@
     }
     
     100% {
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes order {
     0% {
-        transform: translateX(10%);
+        transform: translateX(0);
     }
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+        transition: transform 50ms ease-in-out;
+    }
+
+    100% {
+        transform: rotate(-180deg);
+        transition: transform 50ms ease-in-out;
     }
 }
 
@@ -204,7 +216,7 @@
         animation: order 1000ms;
     }
 
-    &__icon {
+    &__choice:hover &__icon {
         position: absolute;
         background: $white;
         border-radius: 50%;
@@ -212,7 +224,7 @@
         width: 12px;
         color: $color-tertiary;
         font-size: 12px;
-        transform: rotate(1turn);
+        animation: rotation 225ms;
     }
 }
 
