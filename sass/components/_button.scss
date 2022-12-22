@@ -12,6 +12,10 @@
     border: 0px;
     cursor: pointer;
 
+    &.button__order {
+        margin: $spacing * 7 0px;
+    }
+
     &__link {
         margin: 0px;
     }
@@ -37,6 +41,6 @@
 
 @media screen  and (min-width: 768px) {
     .button {
-        margin: $spacing * 7 0px;
+        margin: $spacing * 4 0px $spacing * 7 0px;
     }
 }

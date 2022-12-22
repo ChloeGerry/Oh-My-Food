@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import "../sass/variables.scss";
-@import "../sass/components/button.scss";
-@import "../sass/components/likeIcon.scss";
-@import "../sass/components/footer.scss";
-@import "../sass/homepage.scss";
-@import "../sass/restaurants.scss";
+
+@import "./utils/variables.scss";
+@import "./components/button.scss";
+@import "./layouts/likeIcon.scss";
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+@import "./pages/loadingBar.scss";
+@import "./utils/mixins.scss";
+@import "./homepage.scss";
+@import "./restaurants.scss";
