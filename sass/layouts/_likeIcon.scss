@@ -4,13 +4,16 @@
 
 @keyframes like__icon--solid {
     0% {
+        opacity: 0.5;
         background-color: $color-secondary;
         -webkit-background-clip: text;
         color: transparent;
     }
 
     50% {
-        background-color: #dc56dc;
+        opacity: 1;
+        background-color: $color-secondary;
+        // background-color: #dc56dc;
         -webkit-background-clip: text;
         color: transparent;
     }
