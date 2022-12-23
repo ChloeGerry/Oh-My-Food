@@ -1,12 +1,17 @@
-//  .homePageContent > #homePage, .homePageContent > .main, .homePageContent > .footer {
-//     visibility: hidden;
-// }
+ @keyframes hidding-homePage {
+    0% {
+        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+ }
 
-
-// #homePage {
-//     visibility: initial;
-//     opacity: 1;
-// }
+.header, .main, .footer {
+    animation: hidding-homePage 0ms 3150ms both;
+}
 
 .fullContent {
     @include fullPage-layout;
