@@ -9,7 +9,7 @@
     }
  }
 
-.header, .main, .footer {
+.hiddenPage {
     animation: hidding-homePage 0ms 3150ms both;
 }
 
@@ -122,10 +122,10 @@
         background: $card-color;
         border-radius: 20px;
         box-shadow: 5px 5px 20px $shadow-color;
-    }
-
-    &__navigationCard:hover {
-        background: lighten($color-primary, 35%);
+        transition: background 400ms;
+        &:hover {
+            background: lighten($color-primary, 35%);
+        }
     }
 
     &__Icon {

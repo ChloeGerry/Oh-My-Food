@@ -1,6 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 162px;
+  margin: 16px 0px 8px 0px;
+}
+.header__link {
+  color: #353535;
+}
+.header__icon {
+  font-size: 24px;
+}
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 200px;
+  }
+  .header__wrapper {
+    width: 100%;
+  }
+  .header.header__menu {
+    margin: 16px 72px;
+  }
+}
 .button {
   display: flex;
   align-self: center;
@@ -14,6 +51,7 @@
   margin: 40px 0px 72px 0px;
   border: 0px;
   cursor: pointer;
+  transition: opacity 250ms;
 }
 .button.button__order {
   margin: 56px 0px;
@@ -85,43 +123,6 @@
   display: none;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-}
-.header__logo {
-  width: 162px;
-  margin: 16px 0px 8px 0px;
-}
-.header__link {
-  color: #353535;
-}
-.header__icon {
-  font-size: 24px;
-}
-.header__wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.header.header__menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 16px 24px;
-}
-
-@media screen and (min-width: 768px) {
-  .header__logo {
-    width: 200px;
-  }
-  .header__wrapper {
-    width: 100%;
-  }
-  .header.header__menu {
-    margin: 16px 72px;
-  }
-}
 .footer {
   background-color: #353535;
   padding: 24px 0px 32px 24px;
@@ -202,7 +203,7 @@
     opacity: 1;
   }
 }
-.header, .main, .footer {
+.hiddenPage {
   animation: hidding-homePage 0ms 3150ms both;
 }
 
@@ -304,6 +305,7 @@
   background: #F6F6F6;
   border-radius: 20px;
   box-shadow: 5px 5px 20px #D2D2D2;
+  transition: background 400ms;
 }
 .operation__navigationCard:hover {
   background: #f2eafb;
@@ -512,22 +514,22 @@
     opacity: 1;
   }
 }
-@keyframes order {
+@keyframes orderButton {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
-    transition: transform 50ms ease-in-out;
+    transition: transform 0ms ease-in-out;
   }
   100% {
     transform: rotate(-180deg);
-    transition: transform 50ms ease-in-out;
+    transition: transform 0ms ease-in-out;
   }
 }
 .menu {
@@ -552,19 +554,20 @@
   background: #ffffff;
   margin-top: 16px;
   box-shadow: 5px 5px 20px #D2D2D2;
-  animation: menu 1000ms backwards;
+  animation: menu 350ms backwards;
+  overflow-x: hidden;
 }
 .menu__choice--1 {
-  animation-delay: 250ms;
+  animation-delay: 150ms;
 }
 .menu__choice--2 {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
 }
 .menu__choice--3 {
-  animation-delay: 750ms;
+  animation-delay: 450ms;
 }
 .menu__choice--4 {
-  animation-delay: 1000ms;
+  animation-delay: 600ms;
 }
 .menu__link {
   display: flex;
@@ -617,7 +620,7 @@
   padding: 40px 32px;
   border-radius: 0px 20px 20px 0px;
   width: fit-content;
-  animation: order 1000ms;
+  animation: orderButton 250ms ease-in-out;
 }
 .menu__choice:hover .menu__icon {
   position: absolute;
@@ -627,7 +630,7 @@
   width: 12px;
   color: #99E2D0;
   font-size: 12px;
-  animation: rotation 225ms;
+  animation: rotation 175ms 100ms;
 }
 
 @media screen and (min-width: 768px) {

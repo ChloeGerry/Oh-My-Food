@@ -74,25 +74,25 @@
     }
 }
 
-@keyframes order {
+@keyframes orderButton {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 }
 
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
-        transition: transform 50ms ease-in-out;
+        transition: transform 0ms ease-in-out;
     }
 
     100% {
         transform: rotate(-180deg);
-        transition: transform 50ms ease-in-out;
+        transition: transform 0ms ease-in-out;
     }
 }
 
@@ -121,10 +121,11 @@
         background: $white;
         margin-top: $spacing * 2;
         box-shadow: 5px 5px 20px $shadow-color;
-        animation: menu 1000ms backwards;
+        animation: menu 350ms backwards;
+        overflow-x: hidden;
         @for $i from 1 through 4 {
             &--#{$i} {
-                animation-delay: 250ms * $i;
+                animation-delay: 150ms * $i;
             }
         }
     }
@@ -188,7 +189,7 @@
         padding: $spacing * 5 $spacing * 4;
         border-radius: 0px 20px 20px 0px;
         width: fit-content;
-        animation: order 1000ms;
+        animation: orderButton 250ms ease-in-out;
     }
 
     &__choice:hover &__icon {
@@ -199,7 +200,7 @@
         width: 12px;
         color: $color-tertiary;
         font-size: 12px;
-        animation: rotation 225ms;
+        animation: rotation 175ms 100ms;
     }
 }
 

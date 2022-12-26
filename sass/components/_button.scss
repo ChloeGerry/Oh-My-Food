@@ -11,6 +11,7 @@
     margin: $spacing * 5 0px $spacing * 9 0px;
     border: 0px;
     cursor: pointer;
+    transition: opacity 250ms;
 
     &.button__order {
         margin: $spacing * 7 0px;
