@@ -33,6 +33,7 @@
     .header {
         &__logo {
             width: 200px;
+            margin:$spacing * 3 0px $spacing * 2 0px;
         }
         
         &__wrapper {
