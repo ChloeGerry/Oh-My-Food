@@ -157,7 +157,8 @@
   .footer {
     display: flex;
     flex-direction: row-reverse;
-    padding: 48px 100px 40px 32px;
+    align-items: center;
+    padding: 48px 80px 40px 32px;
   }
   .footer__wrapper {
     display: flex;
