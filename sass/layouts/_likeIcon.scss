@@ -1,0 +1,51 @@
+.like  > .like__icon--solid {
+    display: none;
+}
+
+@keyframes like__icon--solid {
+    0% {
+        opacity: 0.5;
+        background-color: $color-secondary;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    50% {
+        opacity: 1;
+        background-color: $color-secondary;
+        // background-color: #dc56dc;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        background-color: $color-primary;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+.like {
+    border: none;
+    background: none;
+    cursor: pointer; 
+
+    &__icon {
+        font-size: 24px;
+        color: $black;
+    }
+
+    &:link {
+        text-decoration: none;
+    }
+    
+    &:hover &__icon--solid {
+        display: block;
+        animation: like__icon--solid 750ms;
+        color: $color-primary;
+    }
+
+    &:hover &__icon--regular {
+        display: none;
+    }
+}
